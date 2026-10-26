@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff1f7">
-  <meta name="description" content="Discover creative products and services made for you.">
-  <title>Pink Bloom Studio | Your Creative Business</title>
+
+  <title>Pink Bloom Studio | AI Creative Services</title>
+
+  <meta name="description" content="Creative AI thumbnails, videos, and digital content for creators and businesses.">
 
   <style>
     * {
@@ -22,254 +23,341 @@
     body {
       font-family: Arial, sans-serif;
       background: #fff7fb;
-      color: #302432;
-      line-height: 1.6;
+      color: #382536;
+      line-height: 1.7;
     }
 
     header {
       background: white;
-      padding: 18px 6%;
+      padding: 16px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
       flex-wrap: wrap;
-      box-shadow: 0 2px 12px #00000008;
+      gap: 12px;
+      box-shadow: 0 2px 10px #00000008;
     }
 
     .logo {
-      color: #db2777;
-      font-size: 22px;
+      color: #df2785;
+      font-size: 21px;
       font-weight: bold;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
     nav a {
-      color: #493744;
+      color: #493544;
       text-decoration: none;
-      margin-left: 14px;
       font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #df2785;
     }
 
     .hero {
       text-align: center;
-      padding: 75px 20px;
-      background: linear-gradient(135deg, #ffe4f0, #fff7fb);
+      padding: 85px 20px;
+      background: linear-gradient(135deg, #ffe1f0, #fff3fa);
     }
 
     .hero h1 {
-      font-size: clamp(34px, 7vw, 54px);
-      line-height: 1.15;
+      font-size: clamp(32px, 6vw, 52px);
+      line-height: 1.2;
       margin-bottom: 18px;
     }
 
-    .hero h1 span {
-      color: #db2777;
+    .pink {
+      color: #df2785;
     }
 
     .hero p {
-      max-width: 560px;
+      max-width: 650px;
       margin: 0 auto 25px;
-      color: #685665;
-      font-size: 17px;
+      color: #695565;
     }
 
-    .btn {
+    .button {
       display: inline-block;
-      background: #db2777;
-      color: white;
-      padding: 13px 24px;
+      padding: 12px 22px;
       border-radius: 30px;
+      background: #df2785;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      border: none;
-      cursor: pointer;
-      font-size: 15px;
+      margin: 5px;
+      border: 2px solid #df2785;
+      transition: 0.2s;
     }
 
-    .btn:hover {
-      background: #be185d;
+    .button:hover {
+      background: #b91869;
+      border-color: #b91869;
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: #df2785;
     }
 
     section {
-      padding: 55px 6%;
+      padding: 65px 6%;
       text-align: center;
+      scroll-margin-top: 20px;
     }
 
-    .section-title {
-      font-size: 30px;
-      margin-bottom: 10px;
+    .section-intro {
+      max-width: 650px;
+      margin: 10px auto 30px;
+      color: #786879;
     }
 
-    .section-desc {
-      color: #756775;
-      margin-bottom: 30px;
-    }
-
-    .products {
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(
+        auto-fit, minmax(220px, 1fr)
+      );
       gap: 22px;
-      max-width: 1000px;
-      margin: 0 auto;
+      max-width: 1100px;
+      margin: 35px auto 0;
     }
 
-    .product {
+    .card {
       background: white;
-      padding: 28px 20px;
+      border: 1px solid #f5dce9;
       border-radius: 20px;
-      box-shadow: 0 5px 22px #4a20400c;
-      border: 1px solid #f8dce9;
+      padding: 28px 22px;
+      box-shadow: 0 5px 20px #8c366008;
     }
 
-    .product .emoji {
-      font-size: 44px;
+    .card .emoji {
+      font-size: 42px;
       margin-bottom: 12px;
     }
 
-    .product h3 {
-      margin-bottom: 8px;
+    .card h3 {
+      margin-bottom: 10px;
     }
 
-    .product p {
-      color: #756775;
-      margin-bottom: 18px;
-      font-size: 14px;
+    .card p {
+      color: #786879;
+      font-size: 15px;
+      margin-bottom: 15px;
     }
 
     .about {
-      background: #ffeaf3;
+      background: #ffe8f3;
     }
 
     .about p {
-      max-width: 650px;
-      margin: 0 auto;
-      color: #685665;
+      max-width: 720px;
+      margin: 15px auto;
     }
 
-    .contact p {
-      margin: 12px auto 22px;
-      color: #685665;
+    .steps {
+      max-width: 700px;
+      margin: 25px auto;
+      text-align: left;
+    }
+
+    .steps p {
+      background: white;
+      margin: 12px 0;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .contact {
+      background: #fffafd;
     }
 
     footer {
-      text-align: center;
-      background: #302432;
+      background: #382536;
       color: white;
-      padding: 24px 15px;
+      text-align: center;
+      padding: 25px 15px;
       font-size: 13px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
         justify-content: center;
       }
 
-      nav a {
-        margin: 0 7px;
-      }
-
       .hero {
-        padding: 55px 18px;
+        padding: 65px 18px;
       }
 
       section {
-        padding: 42px 18px;
+        padding: 48px 18px;
       }
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <div class="logo">🌸 Pink Bloom Studio</div>
+
     <nav>
       <a href="#home">Home</a>
-      <a href="#products">Products</a>
+      <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
+
     <section class="hero" id="home">
-      <h1>Little Ideas.<br><span>Big Possibilities.</span></h1>
+      <h1>
+        Your Ideas.<br>
+        <span class="pink">Our AI Creativity.</span>
+      </h1>
+
       <p>
-        Welcome to our creative shop!
-        Discover useful products and creative services
-        made to inspire your everyday life.
+        We help content creators and businesses bring
+        their ideas to life with eye-catching thumbnails,
+        creative AI videos, and engaging digital content.
       </p>
-      <a class="btn" href="#products">Explore Our Products</a>
+
+      <a href="#services" class="button">
+        Explore Our Services
+      </a>
+
+      <a href="#contact" class="button button-outline">
+        Let's Work Together
+      </a>
     </section>
 
-    <section id="products">
-      <h2 class="section-title">Our Products & Services</h2>
-      <p class="section-desc">
-        Find something special for you.
+    <section id="services">
+      <h2>Our Creative Services</h2>
+
+      <p class="section-intro">
+        Creative solutions for YouTubers, Facebook creators,
+        small businesses, and online brands.
       </p>
 
-      <div class="products">
-        <article class="product">
-          <div class="emoji">📚</div>
-          <h3>Digital Products</h3>
-          <p>
-            Creative digital downloads, worksheets,
-            guides, and printable resources.
-          </p>
-          <a class="btn" href="#contact">Learn More</a>
-        </article>
+      <div class="services">
 
-        <article class="product">
+        <article class="card">
           <div class="emoji">🎨</div>
-          <h3>Creative Services</h3>
+          <h3>AI Thumbnails</h3>
           <p>
-            Get help with creative projects,
-            designs, and content ideas.
+            Eye-catching YouTube and Facebook thumbnails
+            designed to make your content stand out.
           </p>
-          <a class="btn" href="#contact">Get in Touch</a>
+          <a href="#contact" class="button">
+            Request a Thumbnail
+          </a>
         </article>
 
-        <article class="product">
-          <div class="emoji">✨</div>
-          <h3>Custom Projects</h3>
+        <article class="card">
+          <div class="emoji">🎬</div>
+          <h3>AI Video Creation</h3>
           <p>
-            Have a unique idea?
-            Let's explore how we can bring it to life.
+            Creative AI videos, story clips, promotional
+            videos, and short-form content.
           </p>
-          <a class="btn" href="#contact">Contact Us</a>
+          <a href="#contact" class="button">
+            Request a Video
+          </a>
         </article>
+
+        <article class="card">
+          <div class="emoji">✨</div>
+          <h3>AI Content Creation</h3>
+          <p>
+            Creative concepts, visual content, AI stories,
+            and content ideas for your online brand.
+          </p>
+          <a href="#contact" class="button">
+            Start a Project
+          </a>
+        </article>
+
       </div>
     </section>
 
     <section class="about" id="about">
-      <h2 class="section-title">About Our Business</h2>
+      <h2>About Pink Bloom Studio</h2>
+
       <p>
-        We believe that creativity can make everyday life
-        more enjoyable. Our goal is to offer helpful products
-        and thoughtful services that bring your ideas to life.
-        Thank you for supporting our small business!
+        We believe every great idea deserves a creative
+        beginning. Pink Bloom Studio combines imagination
+        and AI-powered tools to help creators and businesses
+        develop engaging digital content.
       </p>
+
+      <p>
+        Whether you need a thumbnail, a short video, or
+        fresh content ideas, we're here to help bring
+        your vision to life.
+      </p>
+    </section>
+
+    <section id="process">
+      <h2>How It Works</h2>
+
+      <p class="section-intro">
+        Getting started with your creative project is simple.
+      </p>
+
+      <div class="steps">
+        <p>💬 <strong>Step 1:</strong> Contact us about your idea.</p>
+        <p>📝 <strong>Step 2:</strong> Share your requirements and references.</p>
+        <p>🎨 <strong>Step 3:</strong> We create your requested content.</p>
+        <p>✅ <strong>Step 4:</strong> Review the agreed deliverables.</p>
+      </div>
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="section-title">Let's Connect!</h2>
-      <p>
-        Interested in our products or services?
-        Send us a message to get started.
+      <h2>Let's Create Something Amazing!</h2>
+
+      <p class="section-intro">
+        Have a project in mind? Contact us to discuss
+        your ideas, requirements, and pricing.
       </p>
-      <a class="btn" href="mailto:YOUR_EMAIL@example.com?subject=Business%20Inquiry">
-        Email Our Business
+
+      <!-- Replace the email address below with yours -->
+      <a
+        class="button"
+        href="mailto:YOUR_EMAIL@example.com?subject=Pink%20Bloom%20Studio%20Inquiry"
+      >
+        ✉️ Email Us
+      </a>
+
+      <!-- Replace the WhatsApp number below with yours -->
+      <a
+        class="button"
+        href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💬 Chat on WhatsApp
       </a>
     </section>
+
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Pink Bloom Studio. All rights reserved.</p>
-    <p>Made with ❤️ for creative minds.</p>
+    <p>
+      © 2026 Pink Bloom Studio. All rights reserved.
+    </p>
+    <p>Made with 💗 and creativity.</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
 </body>
 </html>
