@@ -4,40 +4,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <meta name="theme-color" content="#fff1f7">
+  <meta name="description" content="Discover creative products and services made for you.">
+  <title>Pink Bloom Studio | Your Creative Business</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      background: #fff0f6;
-      color: #333;
-      padding: 40px 20px;
+      background: #fff7fb;
+      color: #302432;
+      line-height: 1.6;
     }
-    .card {
+
+    header {
       background: white;
-      padding: 30px 20px;
-      border-radius: 20px;
-      max-width: 400px;
-      margin: 40px auto;
-      box-shadow: 0 4px 15px #0001;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 12px #00000008;
     }
-    h1 { color: #e84393; }
-    button {
-      background: #e84393;
+
+    .logo {
+      color: #db2777;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #493744;
+      text-decoration: none;
+      margin-left: 14px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: linear-gradient(135deg, #ffe4f0, #fff7fb);
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 7vw, 54px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #db2777;
+    }
+
+    .hero p {
+      max-width: 560px;
+      margin: 0 auto 25px;
+      color: #685665;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #db2777;
       color: white;
+      padding: 13px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
       border: none;
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-size: 16px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      background: #be185d;
+    }
+
+    section {
+      padding: 55px 6%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      color: #756775;
+      margin-bottom: 30px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product {
+      background: white;
+      padding: 28px 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 22px #4a20400c;
+      border: 1px solid #f8dce9;
+    }
+
+    .product .emoji {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .product h3 {
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      color: #756775;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .about {
+      background: #ffeaf3;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #685665;
+    }
+
+    .contact p {
+      margin: 12px auto 22px;
+      color: #685665;
+    }
+
+    footer {
+      text-align: center;
+      background: #302432;
+      color: white;
+      padding: 24px 15px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      section {
+        padding: 42px 18px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>Welcome, Buddy!</h1>
-    <p>This is my very first website.</p>
-    <p>I created it using GitHub on my Android phone!</p>
-    <button onclick="alert('You did it!')">Tap Me!</button>
-  </div>
+  <header>
+    <div class="logo">🌸 Pink Bloom Studio</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Little Ideas.<br><span>Big Possibilities.</span></h1>
+      <p>
+        Welcome to our creative shop!
+        Discover useful products and creative services
+        made to inspire your everyday life.
+      </p>
+      <a class="btn" href="#products">Explore Our Products</a>
+    </section>
+
+    <section id="products">
+      <h2 class="section-title">Our Products & Services</h2>
+      <p class="section-desc">
+        Find something special for you.
+      </p>
+
+      <div class="products">
+        <article class="product">
+          <div class="emoji">📚</div>
+          <h3>Digital Products</h3>
+          <p>
+            Creative digital downloads, worksheets,
+            guides, and printable resources.
+          </p>
+          <a class="btn" href="#contact">Learn More</a>
+        </article>
+
+        <article class="product">
+          <div class="emoji">🎨</div>
+          <h3>Creative Services</h3>
+          <p>
+            Get help with creative projects,
+            designs, and content ideas.
+          </p>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </article>
+
+        <article class="product">
+          <div class="emoji">✨</div>
+          <h3>Custom Projects</h3>
+          <p>
+            Have a unique idea?
+            Let's explore how we can bring it to life.
+          </p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="section-title">About Our Business</h2>
+      <p>
+        We believe that creativity can make everyday life
+        more enjoyable. Our goal is to offer helpful products
+        and thoughtful services that bring your ideas to life.
+        Thank you for supporting our small business!
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section-title">Let's Connect!</h2>
+      <p>
+        Interested in our products or services?
+        Send us a message to get started.
+      </p>
+      <a class="btn" href="mailto:YOUR_EMAIL@example.com?subject=Business%20Inquiry">
+        Email Our Business
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Pink Bloom Studio. All rights reserved.</p>
+    <p>Made with ❤️ for creative minds.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
